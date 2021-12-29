@@ -26,3 +26,6 @@ Route::get('/test', function () {
 Route::resource('cars',\App\Http\Controllers\API\CarAPIController::class);
 //Route::resource('cars', \App\Http\Controllers\API\CarAPIController::class);
 //    App\Htstp\Controllers\API\CarAPIController::class);
+
+
+Route::resource('shops', App\Http\Controllers\API\ShopAPIController::class);

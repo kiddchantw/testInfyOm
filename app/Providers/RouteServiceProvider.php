@@ -42,7 +42,7 @@ class RouteServiceProvider extends ServiceProvider
             Route::prefix('api')
                 ->middleware('api')
                 ->as('api.')
-//                ->namespace($this->app->getNamespace().'Http\Controllers\API')
+                ->namespace($this->app->getNamespace().'Http\Controllers\API')
 // 這句會導致
 // Target class [App\Http\Controllers\API\App\Http\Controllers\API\CarAPIController] does not exist.
                 ->group(base_path('routes/api.php'));
