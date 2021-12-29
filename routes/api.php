@@ -29,3 +29,6 @@ Route::resource('cars',\App\Http\Controllers\API\CarAPIController::class);
 
 
 Route::resource('shops', App\Http\Controllers\API\ShopAPIController::class);
+
+
+Route::resource('technicians', App\Http\Controllers\API\TechnicianAPIController::class);

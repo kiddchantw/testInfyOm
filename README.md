@@ -40,15 +40,33 @@ Route::prefix('api')
     
     ```
 
-    - 會產生對應的 `Migration ,Model ,Repository,Factory,Request,API Controller,RepositoryTest,ApiTest`
-    - 參考官方文件 [https://infyom.com/open-source/laravelgenerator/docs/7.0/getting-started](https://infyom.com/open-source/laravelgenerator/docs/7.0/getting-started)
+- 需要設定 filed ( model的property ,request的validation)     
+![](public/api-0.png)
 
-image 1
+  - 會產生對應的 `Migration ,Model ,Repository,Factory,Request,API Controller,RepositoryTest,ApiTest`
+    <details><summary>檔案位置</summary>
+    
+    ![](public/api-1.png)
+      
+    ![](public/api-2.png)
+    </details>
+    
+- 參考官方文件 [https://infyom.com/open-source/laravelgenerator/docs/7.0/getting-started](https://infyom.com/open-source/laravelgenerator/docs/7.0/getting-started)
 
-<img src="https://github.com/kiddchantw/testInfyOm/blob/main/public/swagger-doc.png" width="90%">
-
-image 2
+- swagger 畫面如下
 ![](./public/swagger-doc.png)
 
-image 3 
-![](https://github.com/kiddchantw/testInfyOm/blob/main/public/swagger-doc.png)
+
+# Part 4 透過 .json 建立API
+
+- 可從官方提供的json建立網站設定model/talbe欄位
+    - [https://harish81.github.io/infyom-schema-generator](https://harish81.github.io/infyom-schema-generator/)
+    - 並將檔案放在  resources/model_schemas
+- 參考官方文件的 **Fields From File**  [https://infyom.com/open-source/laravelgenerator/docs/8.0/generator-options#fields-from-file](https://infyom.com/open-source/laravelgenerator/docs/8.0/generator-options#fields-from-file)
+
+    ```php
+    php artisan infyom:api Technician --fieldsFile=technician.json
+    ```
+
+
+- 效果同 part 3的做法，但可不用再設定 filed
