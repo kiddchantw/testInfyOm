@@ -42,3 +42,13 @@ Route::prefix('api')
 
     - 會產生對應的 `Migration ,Model ,Repository,Factory,Request,API Controller,RepositoryTest,ApiTest`
     - 參考官方文件 [https://infyom.com/open-source/laravelgenerator/docs/7.0/getting-started](https://infyom.com/open-source/laravelgenerator/docs/7.0/getting-started)
+
+image 1
+
+<img src="https://github.com/kiddchantw/testInfyOm/blob/main/public/swagger-doc.png" width="90%">
+
+image 2
+![](./public/swagger-doc.png)
+
+image 3 
+![](https://github.com/kiddchantw/testInfyOm/blob/main/public/swagger-doc.png)
