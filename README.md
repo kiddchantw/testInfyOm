@@ -98,3 +98,4 @@ Route::prefix('api')
 ## Generate From Table
 - 參考： https://infyom.com/open-source/laravelgenerator/docs/8.0/generator-options#generate-from-table
 - `php artisan infyom:scaffold Staff --fromTable --tableName=staffs`
+- 效果同part 4，也不會產生新的 migration，但也因此無法 rollback 。
