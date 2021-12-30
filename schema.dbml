@@ -1,0 +1,11 @@
+TABLE "staffs" {
+  id integer [pk]
+  name varchar
+}
+
+TABLE "sales" {
+  id integer [pk]
+  name varchar
+}
+
+

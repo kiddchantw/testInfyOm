@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Butschster\Dbml\DbmlParserFactory;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,25 @@ Route::get('/test', function () {
 });
 
 
+Route::get('/test-dbml', function () {
+    $parser = DbmlParserFactory::create();
+    $schema = $parser->parse(<<<DBML
+    Project test {
+        database_type: 'mysql'
+        Note: 'Description of the project'
+    }
+    Table countries {
+        code int [pk]
+        name varchar
+        continent_name varchar
+    }
+    DBML);
+
+    $tables = $schema->getTables(); // \Butschster\Dbml\Ast\TableNode[]
+    return $tables;
+    return 'test-dbml';
+});
+
+
+
+Route::resource('staff', App\Http\Controllers\StaffController::class);
